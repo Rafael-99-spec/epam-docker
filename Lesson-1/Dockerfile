@@ -1,9 +1,5 @@
 FROM ubuntu:21.04
-RUN apt-get upgrade -y
-RUN echo "deb https://nginx.org/packages/ubuntu/ xenial nginx" >> /etc/apt/sources.list
-RUN echo "deb-src https://nginx.org/packages/ubuntu/ xenial nginx" >> /etc/apt/sources.list
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install nginx -y
 RUN apt-get install wget -y
 RUN apt-get install curl -y
 RUN apt-get install openssl -y
