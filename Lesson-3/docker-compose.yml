@@ -1,15 +1,22 @@
 version: "3.9"
 services:
-  web:
+  web1:
     build: .
     ports:
-      - "5000:5000"
+      - "5000:80"
     volumes:
       - .:/code
-      - logvolume01:/var/log
+      - volume01:/var/log
     links:
       - redis
-  redis: 
-    image: redis
+  web2:
+    build: .
+    ports:
+      - "5001:80"
+    volumes:
+      - .:/code
+      - volume01:/var/log
+    links:
+      - redis
 volumes:
-  logvolume01: {}
+  volume01: {}
