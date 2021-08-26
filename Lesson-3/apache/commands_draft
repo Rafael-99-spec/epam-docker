@@ -1,0 +1,32 @@
+    1  apk add openrc --no-cache
+    2  apk add --no-cache apache2
+    3  find / -name "apache"
+    4  find / -name "httpd"
+    5  apk add mc
+    6  mc
+    7  62;51M62;51m62;51M62;51m
+    8  mc
+    9  nano /etc/apache2/httpd.conf 
+   10  apk add nano
+   11  apk add lynx net-tools
+   12  nano /etc/apache2/httpd.conf 
+   13  mkdir /www
+   14  nano /www/index.html
+   15  nano /etc/apache2/httpd.conf 
+   16  rc-update add apache2 default
+   17  rc-service apache2 restart
+   18  exit
+   19  nano /etc/apache2/httpd.conf 
+   20  vi /etc/apache2/httpd.conf 
+   21  vi /etc/apache2/httpd.conf 
+   22  rc-service apache2 restart
+   23  vi /etc/apache2/httpd.conf 
+   24  rc-service apache2 restart
+   25  vi /etc/apache2/httpd.conf 
+   26  rc-service apache2 restart
+   27  vi /etc/apache2/httpd.conf 
+   28  rc-service apache2 restart
+   29  apk update
+   30  apk add php php-fpm php-zip
+   31  vi /etc/apache2/conf.d/default.conf 
+   32  history
