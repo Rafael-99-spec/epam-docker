@@ -5,4 +5,5 @@ COPY httpd.conf /etc/apache2/httpd.conf
 COPY index.html /www
 RUN rc-update add apache2 default
 EXPOSE 8082
-CMD []
+CMD ["-D","FOREGROUND"]
+ENTRYPOINT ["/usr/sbin/httpd"]
