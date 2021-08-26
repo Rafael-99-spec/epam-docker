@@ -1,32 +1,31 @@
-    1  apk add openrc --no-cache
-    2  apk add --no-cache apache2
-    3  find / -name "apache"
-    4  find / -name "httpd"
-    5  apk add mc
-    6  mc
-    7  62;51M62;51m62;51M62;51m
-    8  mc
-    9  nano /etc/apache2/httpd.conf 
-   10  apk add nano
-   11  apk add lynx net-tools
-   12  nano /etc/apache2/httpd.conf 
-   13  mkdir /www
-   14  nano /www/index.html
-   15  nano /etc/apache2/httpd.conf 
-   16  rc-update add apache2 default
-   17  rc-service apache2 restart
-   18  exit
-   19  nano /etc/apache2/httpd.conf 
-   20  vi /etc/apache2/httpd.conf 
-   21  vi /etc/apache2/httpd.conf 
-   22  rc-service apache2 restart
-   23  vi /etc/apache2/httpd.conf 
-   24  rc-service apache2 restart
-   25  vi /etc/apache2/httpd.conf 
+web12:/home/vagrant# history
+    1  apk update
+    2  apk add --no-cache openrc
+    3  apk add --no-cache apache2
+    4  apk add mc lynx net-tools
+    5  apk add nano
+    6  nano /etc/apache2/httpd.conf
+    7  rc-service apache2 start
+    8  ip a
+    9  lynx 192.168.50.13
+   10  nano /etc/apache2/httpd.conf
+   11  rc-service apache2 restart
+   12  lynx 192.168.50.13:8081
+   13  nano /etc/apache2/httpd.conf
+   14  rc-service apache2 restart
+   15  lynx 192.168.50.13:8082
+   16  netstat -tulnp
+   17  mkdir www
+   18  mkdir /www
+   19  nano /www/index.html
+   20  nano /etc/apache2/httpd.conf
+   21  rc-service apache2 restart
+   22  nano /etc/apache2/httpd.conf
+   23  ls -l /var/www/
+   24  cat /var/www/localhost/htdocs/index.html
+   25  nano /etc/apache2/httpd.conf
    26  rc-service apache2 restart
-   27  vi /etc/apache2/httpd.conf 
-   28  rc-service apache2 restart
-   29  apk update
-   30  apk add php php-fpm php-zip
-   31  vi /etc/apache2/conf.d/default.conf 
-   32  history
+   27  netstat -tulnp
+   28  lynx 192.168.50.13:8082
+   29  history
+
