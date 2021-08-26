@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FROM alpine:latest
 apk add openrc --no-cache
 RUN apk add nginx
