@@ -32,4 +32,3 @@ services:
 
 volumes:
   Newvol01:
-#    external: true
