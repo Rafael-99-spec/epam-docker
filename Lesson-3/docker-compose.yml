@@ -1,20 +1,5 @@
 version: "3.9"
 services:
-  #nginxmy:
-        #build: ./nginx/
-        #image: nginxmy
-        #ports:
-        #  - "8081:8081"
-        #volumes:
-        #  - volume01:/www:rw
-  #apachemy:
-        #build: ./apache/
-        #image: apachemy
-        #ports:
-        #  - "8082:8082"
-        #volumes:
-        #  - volume01:/www:rw
-
   web111:
         container_name: web111
         image: nginxmine:new
