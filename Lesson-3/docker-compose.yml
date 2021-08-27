@@ -3,6 +3,8 @@ services:
   web111:
         container_name: web111
         image: nginxmine:new
+        networks:
+          - netnginx
         ports:
           - "8081:8081"
         volumes:
@@ -10,10 +12,17 @@ services:
   web222:
         container_name: web222
         image: apachemine:new
+        networks:
+          - netapache
         ports:
           - "8082:8082"
         volumes:
           - Newvol01:/www
+networks:
+  netnginx:
+    #driver: custom-driver-1
+  netapache:
+    #driver: custom-driver-2
 
 volumes:
   Newvol01:
