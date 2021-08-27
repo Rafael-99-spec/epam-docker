@@ -1,35 +1,35 @@
 version: "3.9"
 services:
   #nginxmy:
-  #      build: ./nginx/
-  #      image: nginxmy
-  #      ports:
-  #        - "8081:8081"
-  #      volumes:
-  #        - volume01:/www:rw
+        #build: ./nginx/
+        #image: nginxmy
+        #ports:
+        #  - "8081:8081"
+        #volumes:
+        #  - volume01:/www:rw
   #apachemy:
-  #      build: ./apache/
-  #      image: apachemy
-  #      ports:
-  #        - "8082:8082"
-  #      volumes:
-  #        - volume01:/www:rw
+        #build: ./apache/
+        #image: apachemy
+        #ports:
+        #  - "8082:8082"
+        #volumes:
+        #  - volume01:/www:rw
 
   web111:
         container_name: web111
-        image: nginxmy
-        volumes:
-          - volume01:/www:rw
+        image: nginxmine:new
         ports:
           - "8081:8081"
+        volumes:
+          - Newvol01:/www
   web222:
         container_name: web222
-        image: apachemy
+        image: apachemine:new
         ports:
           - "8082:8082"
         volumes:
-          - volume01:/www:rw
+          - Newvol01:/www
 
 volumes:
-  volume01:
-    external: true
+  Newvol01:
+#    external: true
