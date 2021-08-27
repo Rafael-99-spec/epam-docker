@@ -20,9 +20,7 @@ services:
           - Newvol01:/www
 networks:
   netnginx:
-    #driver: custom-driver-1
   netapache:
-    #driver: custom-driver-2
 
 volumes:
   Newvol01:
