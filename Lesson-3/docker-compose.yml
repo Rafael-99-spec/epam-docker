@@ -1,22 +1,19 @@
 version: "3.9"
 services:
-  web1:
-    build: .
-    ports:
-      - "8080:80"
-    volumes:
-      - .:/code
-      - volume01:/var/log
-    links:
-      - redis
-  web2:
-    build: .
-    ports:
-      - "8081:81"
-    volumes:
-      - .:/code
-      - volume01:/var/log
-    links:
-      - redis
+  web111:
+        build: ./nginx/
+        image: nginxmy
+        ports:
+          - "8081:8081"
+        volumes:
+          - volume01:/www:rw
+  web222:
+        build: ./apache/
+        image: apachemy
+        ports:
+          - "8082:8082"
+        volumes:
+          - volume01:/www:rw
 volumes:
-  volume01: {}
+  volume01:
+    external: true
