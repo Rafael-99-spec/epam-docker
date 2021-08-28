@@ -9,7 +9,8 @@ services:
                   cpus: '0.50'
                   memory: 512M               
         networks:
-          - netnginx
+          netnginx:
+            ipv4_address: 172.19.0.2
         ports:
           - "8081:8081"
         volumes:
@@ -23,6 +24,9 @@ services:
                   cpus: '0.50'
                   memory: 512M
         networks:
+          netnginx:
+            ipv4_address: 172.25.0.2
+        networks:
           - netapache
         ports:
           - "8082:8082"
@@ -30,7 +34,14 @@ services:
           - Newvol01:/www
 networks:
   netnginx:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.19.0.0/24
   netapache:
-
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.25.0.0/24
 volumes:
   Newvol01:
