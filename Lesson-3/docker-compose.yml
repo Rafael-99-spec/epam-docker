@@ -3,6 +3,11 @@ services:
   web111:
         container_name: web111
         image: nginxmine:new
+        deploy:
+            resources:
+                limits:
+                  cpus: '0.50'
+                  memory: 512M               
         networks:
           - netnginx
         ports:
@@ -12,6 +17,11 @@ services:
   web222:
         container_name: web222
         image: apachemine:new
+        deploy:
+            resources:
+                limits:
+                  cpus: '0.50'
+                  memory: 512M
         networks:
           - netapache
         ports:
